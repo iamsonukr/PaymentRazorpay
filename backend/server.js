@@ -13,6 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors())
 
+app.get('/',(req,res)=>{
+    res.send("Your payment gateway is ready")
+})
+
 // api to place order
 app.post("/api/order",async(req,res)=>{
     try {
